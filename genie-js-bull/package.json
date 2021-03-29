@@ -1,0 +1,42 @@
+{
+  "name": "genie-js-bull",
+  "version": "1.0.0",
+  "description": "bull test",
+  "main": "server.js",
+  "dependencies": {
+    "bull": "^3.22.0",
+    "dotenv-safe": "^8.2.0",
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "ioredis": "^4.24.5",
+    "mongoose": "^5.12.2",
+    "prettier": "^2.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -r dotenv-safe/config -r esm ./src/server.js",
+    "fixture": "node -r dotenv-safe/config -r esm ./src/fixtures/index.js",
+    "lint": "./node_modules/.bin/eslint ./src",
+    "pretty": "prettier --write '**/*.{js,json}' '!node_modules/**'",
+    "postpretty": "yarn lint --fix",
+    "docker:dev": "docker-compose -f docker-compose.yml up"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geniein/genie-js.git"
+  },
+  "keywords": [
+    "js",
+    "bull"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geniein/genie-js/issues"
+  },
+  "homepage": "https://github.com/geniein/genie-js#readme"
+}
