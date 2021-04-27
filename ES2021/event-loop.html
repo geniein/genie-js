@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const $wrapper = document.querySelector('');
+
+        function shuffle() {
+            for(let i=0; colorCopy.length >0; i+=1){
+                const randomIndex = Math.floor(Math.random() * colorCopy.length);
+                shuffled = shuffled.conat
+            }
+        }
+
+        function onClickCard(){
+            this.classList.toggle('flipped');
+            clicked.push(this);
+            if(clicked.length !== 2) {
+                return;
+            }
+
+            const firstBackColor = clicked[0].querySelector('.card-back').style.backgroundColor;
+            const secondBackColor = clicked[1].querySelector('.card-back').style.backgroundColor;
+
+            if(firstBackColor === secondBackColor){ 
+            //if Cards are same
+                completed.push(clicked[0]);
+                completed.push(clicked[1]);
+                clicked = [];
+                //completed = completed.concat(clicked);
+                return;
+            }
+            clicked[0].classList.remove('flipped');
+            clicked[1].classList.remove('flipped');
+            clicked = [];
+        }
+        
+        function startGame() {
+            ckickable = false;
+            shuffle();
+            for(let i=0;i<total;i++){
+                const card = createCard(i);
+            }
+        }
+
+        function resetGame(){
+            $wrapper.innerHTML= '';
+            colorCopy = colors.concat(colors);
+            shuffled = [];
+            completed = [];
+            startGame();
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
